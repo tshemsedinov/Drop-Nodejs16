@@ -31,23 +31,23 @@
 
 ### Explore new features
 
-- Stable Web Crypto API (`globalThis.crypto` or `require('node:crypto').webcrypto`): https://nodejs.org/dist/latest-v20.x/docs/api/webcrypto.html
-- Improvements to the Intl API: https://nodejs.org/dist/latest-v20.x/docs/api/intl.html
-- Classes `Blob`: https://nodejs.org/dist/latest-v20.x/docs/api/buffer.html#class-blob
-- Class `BrodcastChannel`: https://nodejs.org/dist/latest-v20.x/docs/api/worker_threads.html#class-broadcastchannel-extends-eventtarget
+- Stable Web Crypto API (`globalThis.crypto` or `require('node:crypto').webcrypto`): https://nodejs.org/api/webcrypto.html
+- Improvements to the Intl API: https://nodejs.org/api/intl.html
+- Classes `Blob`: https://nodejs.org/api/buffer.html#class-blob
+- Class `BrodcastChannel`: https://nodejs.org/api/worker_threads.html#class-broadcastchannel-extends-eventtarget
 - Global function `structuredClone`: https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
-- Class: `v8.GCProfiler`: https://nodejs.org/dist/latest-v20.x/docs/api/v8.html#class-v8gcprofiler
-- Now `child_process.fork` supports `file:` protocol: https://nodejs.org/dist/latest-v20.x/docs/api/child_process.html#child_processforkmodulepath-args-options
+- Class: `v8.GCProfiler`: https://nodejs.org/api/v8.html#class-v8gcprofiler
+- Now `child_process.fork` supports `file:` protocol: https://nodejs.org/api/child_process.html#child_processforkmodulepath-args-options
 
 ### Note that you can't freely use
 
 - Now we have [native test runner module: `node:test`](https://nodejs.org/api/test.html) but it is not completely ready in all aspects. By the way `node:test` is a first module available just with `node:` prefix, it means: you can't access it by `require('test')`
-- Single executable applications: https://nodejs.org/dist/latest-v20.x/docs/api/single-executable-applications.html
-- Both experimental module-based and process-based permission model: https://nodejs.org/dist/latest-v20.x/docs/api/permissions.html
-- Experimental `--watch` flag to enable auto-restarn on changes: https://nodejs.org/dist/latest-v20.x/docs/api/cli.html#--watch
-- Experimental APIs: Web Sreams API: https://nodejs.org/dist/latest-v20.x/docs/api/webstreams.html
-- Experimental method [subprocess[Symbol.dispose]()](https://nodejs.org/dist/latest-v20.x/docs/api/child_process.html#subprocesssymboldispose) added in node.js 20.5.0 to send `SIGTERM` to spawned child process
-- Experimental class `File`: https://nodejs.org/dist/latest-v20.x/docs/api/buffer.html#class-file
+- Single executable applications: https://nodejs.org/api/single-executable-applications.html
+- Both experimental module-based and process-based permission model: https://nodejs.org/api/permissions.html
+- Experimental `--watch` flag to enable auto-restarn on changes: https://nodejs.org/api/cli.html#--watch
+- Experimental APIs: Web Sreams API: https://nodejs.org/api/webstreams.html
+- Experimental method [subprocess[Symbol.dispose]()](https://nodejs.org/api/child_process.html#subprocesssymboldispose) added in node.js 20.5.0 to send `SIGTERM` to spawned child process
+- Experimental class `File`: https://nodejs.org/api/buffer.html#class-file
 - Experimental classes `TracingChannel`, `CustomEvent`, `CompressionStream`, `CustomEvent`
 
 ### Use node.js features instead of dependencies
