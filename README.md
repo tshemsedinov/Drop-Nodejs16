@@ -16,18 +16,18 @@
 - Run your project with flag `--pending-deprecation` to see deprecation warnings and then with flag `--throw-deprecation` to exit with non-zero on deprecated API calls
 - Use native [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) instead of polyfill like `undici` or `node-fetch`. Now you can avoid `axios` and `request()` from `node:http`
 - You can use [Web Streams API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API) to be compatible with browser API in server-side rendering or so
-- Use `Buffer` method `.subarray(start, end)` instead of deprecated `.slice(start, end)`: https://nodejs.org/dist/latest-v20.x/docs/api/all.html#all_buffer_bufslicestart-end
-- Stop using deprecated `url.parse`: https://nodejs.org/dist/latest-v20.x/docs/api/all.html#all_deprecations_dep0169-insecure-urlparse
-- Stop using deprecated `Thenable` in streams: https://nodejs.org/dist/latest-v20.x/docs/api/all.html#all_deprecations_dep0157-thenable-support-in-streams
-- Use http events: `dropRequest` and `drop`: https://nodejs.org/dist/latest-v20.x/docs/api/http.html#event-droprequest
-- Use `server.closeAllConnections()` and `server.closeIdleConnections()`: https://nodejs.org/dist/latest-v20.x/docs/api/http.html#servercloseallconnections
-- Use `module.isBuiltin(moduleName)`: https://nodejs.org/dist/latest-v20.x/docs/api/module.html#moduleisbuiltinmodulename
+- Use `Buffer` method `.subarray(start, end)` instead of deprecated `.slice(start, end)`: https://nodejs.org/api/all.html#all_buffer_bufslicestart-end
+- Stop using deprecated `url.parse`: https://nodejs.org/api/all.html#all_deprecations_dep0169-insecure-urlparse
+- Stop using deprecated `Thenable` in streams: https://nodejs.org/api/all.html#all_deprecations_dep0157-thenable-support-in-streams
+- Use http events: `dropRequest` and `drop`: https://nodejs.org/api/http.html#event-droprequest
+- Use `server.closeAllConnections()` and `server.closeIdleConnections()`: https://nodejs.org/api/http.html#servercloseallconnections
+- Use `module.isBuiltin(moduleName)`: https://nodejs.org/api/module.html#moduleisbuiltinmodulename
 - Now we can use new `V8` features:
   - [`Promise.any()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)
   - [`Array.prototype.findLast()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast)
   - [`Array.prototype.findLastIndex()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex)
-- Use promise-based `node:readline` API, example: `const name = await rl.question('Name:');` and new methods: `clearLine`,  `commit` and `rollback`, `cursorTo`, `moveCursor`, class `Interface`: https://nodejs.org/dist/latest-v20.x/docs/api/readline.html
-- Do not use [`node:async_hooks`](https://nodejs.org/dist/latest-v20.x/docs/api/async_hooks.html) API like `createHook` and `AsyncHook` as non-stable, except stable classes `AsyncLocalStorage` and `AsyncResource`, see docs in a separate article "async context tracking": https://nodejs.org/api/async_context.html
+- Use promise-based `node:readline` API, example: `const name = await rl.question('Name:');` and new methods: `clearLine`,  `commit` and `rollback`, `cursorTo`, `moveCursor`, class `Interface`: https://nodejs.org/api/readline.html
+- Do not use [`node:async_hooks`](https://nodejs.org/api/async_hooks.html) API like `createHook` and `AsyncHook` as non-stable, except stable classes `AsyncLocalStorage` and `AsyncResource`, see docs in a separate article "async context tracking": https://nodejs.org/api/async_context.html
 
 ### Explore new features
 
