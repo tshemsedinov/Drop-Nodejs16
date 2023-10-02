@@ -54,3 +54,9 @@
 
 - Use native [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) instead of npm modules `undici`, `request`, `axios`, `node-fetch`
 - See [previous recommendations](https://github.com/tshemsedinov/Drop-Nodejs14#use-nodejs-features-instead-of-dependencies) for removing third-party dependencies in favour of node.js internal modules
+
+### Related links
+
+- See [100 NodeJS Interview Questions](https://github.com/tshemsedinov/NodeJS-Interview-Questions)
+- See [Node.js 2023 course](https://github.com/HowProgrammingWorks/Index/blob/master/Courses/NodeJS-2022-2023.md) index
+- See [free Node.js lectures](https://github.com/HowProgrammingWorks/Index/blob/master/Courses/NodeJS.md) index
