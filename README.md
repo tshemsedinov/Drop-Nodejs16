@@ -3,12 +3,12 @@
 - Now: October 2023, we have Node.js 18.18.0 LTS and 20.7.0 (current)
 - Going to drop Node.js 16 support before its end-of-file 2023-09-11 in Metarhia codebase, all projects, and course examples
 - Now we can rely on Node.js 18.18.0 capabilities
-- See release schedule: https://github.com/nodejs/release#release-schedule
+- See release schedule: [github.com/nodejs/release#release-schedule](https://github.com/nodejs/release#release-schedule)
 
 ## Important notes
 
-- Before this one see also previous checklist "Drop Node.js 14": https://github.com/tshemsedinov/Drop-Nodejs14
-- New node.js uses `OpenSSL 3` instead of `OpenSSL 1.1.1`. This led to an early end of support for Node.js 16 LST: September 11th, 2023. See details: https://nodejs.org/en/blog/announcements/nodejs16-eol
+- Before this one see also previous checklist "Drop Node.js 14": [github.com/tshemsedinov/Drop-Nodejs14](https://github.com/tshemsedinov/Drop-Nodejs14)
+- New node.js uses `OpenSSL 3` instead of `OpenSSL 1.1.1`. This led to an early end of support for Node.js 16 LST: September 11th, 2023. See details: [nodejs.org/en/blog/announcements/nodejs16-eol](https://nodejs.org/en/blog/announcements/nodejs16-eol)
 
 ### Refactoring checklist as of October 2023
 
@@ -26,8 +26,8 @@
   - [`Promise.any()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)
   - [`Array.prototype.findLast()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast)
   - [`Array.prototype.findLastIndex()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex)
-- Use promise-based `node:readline` API, example: `const name = await rl.question('Name:');` and new methods: `clearLine`,  `commit` and `rollback`, `cursorTo`, `moveCursor`, class `Interface`: https://nodejs.org/api/readline.html
-- Do not use [`node:async_hooks`](https://nodejs.org/api/async_hooks.html) API like `createHook` and `AsyncHook` as non-stable, except stable classes `AsyncLocalStorage` and `AsyncResource`, see docs in a separate article "async context tracking": https://nodejs.org/api/async_context.html
+- Use promise-based [`node:readline` API](https://nodejs.org/api/readline.html), example: `const name = await rl.question('Name:');` and new methods: `clearLine`,  `commit` and `rollback`, `cursorTo`, `moveCursor`, class `Interface`
+- Do not use [`node:async_hooks`](https://nodejs.org/api/async_hooks.html) API like `createHook` and `AsyncHook` as non-stable, except stable classes `AsyncLocalStorage` and `AsyncResource`, see docs in a separate article ["async context tracking"](https://nodejs.org/api/async_context.html)
 
 ### Explore new features
 
@@ -46,7 +46,7 @@
 - Both experimental module-based and process-based [permission model](https://nodejs.org/api/permissions.html)
 - Experimental `--watch` flag to enable [auto-restarn on changes](https://nodejs.org/api/cli.html#--watch)
 - Experimental [Web Sreams API](https://nodejs.org/api/webstreams.html)
-- Experimental method [subprocess[Symbol.dispose]()](https://nodejs.org/api/child_process.html#subprocesssymboldispose) added in node.js 20.5.0 to send `SIGTERM` to spawned child process
+- Experimental method [subprocess[Symbol.dispose]](https://nodejs.org/api/child_process.html#subprocesssymboldispose) added in node.js 20.5.0 to send `SIGTERM` to spawned child process
 - Experimental class [`File`](https://nodejs.org/api/buffer.html#class-file)
 - Experimental classes `TracingChannel`, `CustomEvent`, `CompressionStream`, `CustomEvent`
 
