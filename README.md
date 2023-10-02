@@ -16,12 +16,12 @@
 - Run your project with flag `--pending-deprecation` to see deprecation warnings and then with flag `--throw-deprecation` to exit with non-zero on deprecated API calls
 - Use native [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) instead of polyfill like `undici` or `node-fetch`. Now you can avoid `axios` and `request()` from `node:http`
 - You can use [Web Streams API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API) to be compatible with browser API in server-side rendering or so
-- Use `Buffer` method `.subarray(start, end)` instead of deprecated `.slice(start, end)`: https://nodejs.org/api/all.html#all_buffer_bufslicestart-end
-- Stop using deprecated `url.parse`: https://nodejs.org/api/all.html#all_deprecations_dep0169-insecure-urlparse
-- Stop using deprecated `Thenable` in streams: https://nodejs.org/api/all.html#all_deprecations_dep0157-thenable-support-in-streams
-- Use http events: `dropRequest` and `drop`: https://nodejs.org/api/http.html#event-droprequest
-- Use `server.closeAllConnections()` and `server.closeIdleConnections()`: https://nodejs.org/api/http.html#servercloseallconnections
-- Use `module.isBuiltin(moduleName)`: https://nodejs.org/api/module.html#moduleisbuiltinmodulename
+- Use `Buffer` method `.subarray(start, end)` instead of deprecated `.slice(start, end)`: [see Buffer docs](https://nodejs.org/api/buffer.html#blobslicestart-end-type)
+- Stop using deprecated `url.parse`: [see DEP0169 docs](https://nodejs.org/api/deprecations.html#DEP0169)
+- Stop using deprecated `Thenable` in streams: [see DEP0157 docs](https://nodejs.org/api/deprecations.html#DEP0157)
+- Use http events: `dropRequest` and `drop`: [see http docs](https://nodejs.org/api/http.html#event-droprequest)
+- Use `server.closeAllConnections()` and `server.closeIdleConnections()`: [see http docs](https://nodejs.org/api/http.html#servercloseallconnections)
+- Use `module.isBuiltin(moduleName)`: [see module docs](https://nodejs.org/api/module.html#moduleisbuiltinmodulename)
 - Now we can use new `V8` features:
   - [`Promise.any()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)
   - [`Array.prototype.findLast()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast)
@@ -31,23 +31,23 @@
 
 ### Explore new features
 
-- Stable Web Crypto API (`globalThis.crypto` or `require('node:crypto').webcrypto`): https://nodejs.org/api/webcrypto.html
-- Improvements to the Intl API: https://nodejs.org/api/intl.html
-- Classes `Blob`: https://nodejs.org/api/buffer.html#class-blob
-- Class `BrodcastChannel`: https://nodejs.org/api/worker_threads.html#class-broadcastchannel-extends-eventtarget
-- Global function `structuredClone`: https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
-- Class: `v8.GCProfiler`: https://nodejs.org/api/v8.html#class-v8gcprofiler
-- Now `child_process.fork` supports `file:` protocol: https://nodejs.org/api/child_process.html#child_processforkmodulepath-args-options
+- Stable [Web Crypto API](https://nodejs.org/api/webcrypto.html) (`globalThis.crypto` or `require('node:crypto').webcrypto`)
+- Improvements to the [Intl API](https://nodejs.org/api/intl.html)
+- Class [`Blob`](https://nodejs.org/api/buffer.html#class-blob) from `node:buffer`
+- Class [`BrodcastChannel`](https://nodejs.org/api/worker_threads.html#class-broadcastchannel-extends-eventtarget) from `node:worker_threads`
+- Global function [`structuredClone`](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone)
+- Class [`v8.GCProfiler`](https://nodejs.org/api/v8.html#class-v8gcprofiler)
+- Now [`child_process.fork`](https://nodejs.org/api/child_process.html#child_processforkmodulepath-args-options) supports `file:` protocol
 
 ### Note that you can't freely use
 
 - Now we have [native test runner module: `node:test`](https://nodejs.org/api/test.html) but it is not completely ready in all aspects. By the way `node:test` is a first module available just with `node:` prefix, it means: you can't access it by `require('test')`
-- Single executable applications: https://nodejs.org/api/single-executable-applications.html
-- Both experimental module-based and process-based permission model: https://nodejs.org/api/permissions.html
-- Experimental `--watch` flag to enable auto-restarn on changes: https://nodejs.org/api/cli.html#--watch
-- Experimental APIs: Web Sreams API: https://nodejs.org/api/webstreams.html
+- [Single executable](https://nodejs.org/api/single-executable-applications.html) applications
+- Both experimental module-based and process-based [permission model](https://nodejs.org/api/permissions.html)
+- Experimental `--watch` flag to enable [auto-restarn on changes](https://nodejs.org/api/cli.html#--watch)
+- Experimental [Web Sreams API](https://nodejs.org/api/webstreams.html)
 - Experimental method [subprocess[Symbol.dispose]()](https://nodejs.org/api/child_process.html#subprocesssymboldispose) added in node.js 20.5.0 to send `SIGTERM` to spawned child process
-- Experimental class `File`: https://nodejs.org/api/buffer.html#class-file
+- Experimental class [`File`](https://nodejs.org/api/buffer.html#class-file)
 - Experimental classes `TracingChannel`, `CustomEvent`, `CompressionStream`, `CustomEvent`
 
 ### Use node.js features instead of dependencies
