@@ -44,8 +44,8 @@
 - Now we have [native test runner module: `node:test`](https://nodejs.org/api/test.html) but it is not completely ready in all aspects. By the way `node:test` is a first module available just with `node:` prefix, it means: you can't access it by `require('test')`
 - [Single executable](https://nodejs.org/api/single-executable-applications.html) applications
 - Both experimental module-based and process-based [permission model](https://nodejs.org/api/permissions.html)
-- Experimental `--watch` flag to enable [auto-restarn on changes](https://nodejs.org/api/cli.html#--watch)
-- Experimental [Web Sreams API](https://nodejs.org/api/webstreams.html)
+- Experimental `--watch` flag to enable [auto-restart on changes](https://nodejs.org/api/cli.html#--watch)
+- Experimental [Web Streams API](https://nodejs.org/api/webstreams.html)
 - Experimental method [subprocess[Symbol.dispose]](https://nodejs.org/api/child_process.html#subprocesssymboldispose) added in node.js 20.5.0 to send `SIGTERM` to spawned child process
 - Experimental class [`File`](https://nodejs.org/api/buffer.html#class-file)
 - Experimental classes `TracingChannel`, `CustomEvent`, `CompressionStream`, `CustomEvent`
@@ -53,4 +53,4 @@
 ### Use node.js features instead of dependencies
 
 - Use native [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) instead of npm modules `undici`, `request`, `axios`, `node-fetch`
-- See [previous recomendations](https://github.com/tshemsedinov/Drop-Nodejs14#use-nodejs-features-instead-of-dependencies) for removing third-party dependencies in favour of node.js internal modules
+- See [previous recommendations](https://github.com/tshemsedinov/Drop-Nodejs14#use-nodejs-features-instead-of-dependencies) for removing third-party dependencies in favour of node.js internal modules
